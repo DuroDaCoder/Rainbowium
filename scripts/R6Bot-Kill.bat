@@ -1,0 +1,9 @@
+taskkill /f /im pythonw.exe /t
+taskkill /f /im python.exe /t
+taskkill /f /im py.exe /t
+taskkill /f /im bot.exe /t
+taskkill /f /im bot.py /t
+taskkill /f /im R6Bot.py /t
+taskkill /f /im R6Bot.exe /t
+taskkill /f /im shortcutmaker.py /t
+taskkill /f /im shortcutmaker.exe /t

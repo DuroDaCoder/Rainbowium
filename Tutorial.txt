@@ -1,0 +1,7 @@
+1. Run Setup.bat in this folder. (DON'T RUN IT AS ADMIN.)
+2. Run "Run.bat" after installation.
+
+
+
+Inspired by ValBot
+https://github.com/MrFums/Valbot
