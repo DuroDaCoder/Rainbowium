@@ -38,7 +38,7 @@ ___
 ___
 >Some files are batch files converted to .exe to help with uninstalling and installing Python.
 ___
->(Disabling AV is recomended)
+>(If you have one of these antiviruses, disabling AV is recomended.)
 ![av](https://user-images.githubusercontent.com/48152410/139709535-a168d404-54af-48f0-a926-e32e7248fa36.png)
 
 
