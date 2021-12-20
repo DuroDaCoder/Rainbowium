@@ -38,6 +38,7 @@ lines = a_file.readlines()
 for line in lines:
     print(line)
 a_file.close()
+time.sleep(8)
 
 with open('scripts\launcher_config.txt') as f:
     if 'stm' in f.read():
