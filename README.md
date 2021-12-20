@@ -2,7 +2,7 @@
 
 ### SETUP
 ------------------
-
+You must have game updated, or it will cause trouble. !!!
 
 1. To setup you need to run Setup.bat.
 2. Then run Run.bat
