@@ -21,6 +21,16 @@ upl = "Ubisoft_Connect"
 url = "uplay://launch/635"
 url1 = "steam://rungameid/359550"
 
+try:
+    os.remove("output.txt")
+except Exception:
+    pass
+
+try:
+    os.remove("cloud_wait.txt")
+except Exception:
+    pass
+
 if os.path.isfile('scripts\launcher_config.txt'):
     print("Config was found!")
 else:
@@ -30,7 +40,7 @@ else:
 
 
 os.system('start scripts\hider2.vbs')
-time.sleep(3)
+time.sleep(1)
 
 a_file = open("output.txt")
 
@@ -38,7 +48,7 @@ lines = a_file.readlines()
 for line in lines:
     print(line)
 a_file.close()
-time.sleep(4)
+time.sleep(1)
 
 if os.path.isfile('cloud_wait.txt'):
     print("Waiting 15sec for Cloud Sync.")
@@ -56,8 +66,14 @@ with open('scripts\launcher_config.txt') as f:
                 time.sleep(15)
                 sys.exit()
 
+
 os.remove("output.txt")
-os.remove("cloud_wait.txt")
+
+try:
+    os.remove("cloud_wait.txt")
+except Exception:
+    pass
+
 time.sleep(1)
 os.startfile("bot.py")
 sys.exit()
