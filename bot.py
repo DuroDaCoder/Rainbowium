@@ -59,10 +59,7 @@ def rpc_update():
     except Exception:
         pass
 
-try:
-    rpc_update()
-except Exception:
-    pass
+
     
     
 print("[!]Switch onto R6S window and don't touch mouse or keyboard.[!]")
@@ -146,6 +143,11 @@ pdi.press("f")
 pdi.press("f")
 pdi.press("left")
 pdi.press("enter")
+time.sleep(5)
+try:
+    rpc_update()
+except Exception:
+    pass
 
 while 1:
     search_widget('Locations', 278, 392)
