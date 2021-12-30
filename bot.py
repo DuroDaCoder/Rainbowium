@@ -59,7 +59,12 @@ def rpc_update():
     except Exception:
         pass
 
-
+try:
+    rpc_update()
+except Exception:
+    pass
+    
+    
 print("[!]Switch onto R6S window and don't touch mouse or keyboard.[!]")
 print()
 print("To stop farming, just close this window.")
@@ -109,6 +114,11 @@ def bonus(name, x, y):
     print (f"I found {name} button.")
     print()
     
+time.sleep(5)
+
+Minimize = win32gui.GetForegroundWindow()
+win32gui.ShowWindow(Minimize, win32con.SW_MINIMIZE)
+    
 search_widget('Menu', 172, 319)
 time.sleep(5)
 pdi.press("up")
@@ -136,10 +146,6 @@ pdi.press("f")
 pdi.press("f")
 pdi.press("left")
 pdi.press("enter")
-try:
-    rpc_update()
-except Exception:
-    pass
 
 while 1:
     search_widget('Locations', 278, 392)
