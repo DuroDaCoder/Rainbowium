@@ -104,13 +104,6 @@ def lock_2(name, x, y):
     print()
 
 
-def bonus(name, x, y):
-    print(f"Looking for {name} button.")
-    while not pyautogui.locateOnScreen(f'assets\{name}.png', confidence=0.9):
-        time.sleep(0.5)
-    print (f"I found {name} button.")
-    print()
-    
 time.sleep(5)
 
 Minimize = win32gui.GetForegroundWindow()
@@ -155,12 +148,19 @@ while 1:
     pdi.press("enter")
     spec_doc('Operators', 520, 419)
     time.sleep(0.5)
+    pdi.press("down")
+    time.sleep(0.5)
+    pdi.press("right")
+    time.sleep(0.2)
+    pdi.press("right")
+    time.sleep(0.2)
+    pdi.press("right")
+    time.sleep(0.2)
+    pdi.press("right")
+    time.sleep(0.2)
     pdi.press("enter")
     search_widget('loadout', 292, 302)
     pdi.press("enter")
-    bonus('bonus', 465, 169)
-    time.sleep(0.4)
-    pdi.press("tab")
     error_pic('retry', 1053, 817)
     time.sleep(0.5)
     pdi.press("enter")
