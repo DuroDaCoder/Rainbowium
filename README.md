@@ -25,5 +25,7 @@ You must have game updated, or it will cause trouble. !!!
 >(Steam and Ubisoft Connect are now supported.)
 ___
 >English language is required. (This will be needed always, but you can add your own screenshots with the same name in assets folder, it will fix the issue.)
+
 >1920 x 1080 is required. (This will be needed always, but you can add your own screenshots with the same name in assets folder, it will fix the issue.)
+
 >Fullscreen is required. (This will be needed always, but you can add your own screenshots with the same name in assets folder, it will fix the issue.)
