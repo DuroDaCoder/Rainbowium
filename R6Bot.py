@@ -40,7 +40,7 @@ else:
 
 
 os.system('start scripts\hider2.vbs')
-time.sleep(1)
+time.sleep(5)
 
 a_file = open("output.txt")
 
@@ -66,8 +66,10 @@ with open('scripts\launcher_config.txt') as f:
                 time.sleep(15)
                 sys.exit()
 
-
-os.remove("output.txt")
+try:
+    os.remove("output.txt")
+except Exception:
+    pass
 
 try:
     os.remove("cloud_wait.txt")
@@ -75,5 +77,5 @@ except Exception:
     pass
 
 time.sleep(1)
-os.startfile("bot.py")
+os.startfile("scripts\\Run_Bot.bat")
 sys.exit()
