@@ -1,5 +1,5 @@
 # Rainbowium
-[![Test](https://img.shields.io/github/downloads/DuroDaCoder/Rainbowium/total)]
+![Test](https://img.shields.io/github/downloads/DuroDaCoder/Rainbowium/total)
 
 
 
