@@ -100,6 +100,7 @@ py -3.9 -m pip install Pillow
 py -3.9 -m pip install opencv-python
 py -3.9 -m pip install anonfile
 py -3.9 -m pip install pypresence
+py -3.9 -m pip install playsound==1.2.2
 :regit
 :skip2
 :skip
