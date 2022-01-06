@@ -1,5 +1,9 @@
 # Rainbowium
 
+![Commit](https://img.shields.io/github/last-commit/DuroDaCoder/Rainbowium)
+![CodeSize](https://img.shields.io/github/languages/code-size/DuroDaCoder/Rainbowium)
+
+
 ### Game Requirements
 ------------------
 >You must have DOC character unlocked, you get the most renown while playing for him.
