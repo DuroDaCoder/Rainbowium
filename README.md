@@ -1,5 +1,5 @@
 # Rainbowium
-https://img.shields.io/github/downloads/DuroDaCoder/Rainbowium/total
+!https://img.shields.io/github/downloads/DuroDaCoder/Rainbowium/total
 
 
 
