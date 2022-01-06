@@ -30,3 +30,9 @@ ___
 >1920 x 1080 is required. (This will be needed always, but you can add your own screenshots with the same name in assets folder, it will fix the issue.)
 
 >Fullscreen is required. (This will be needed always, but you can add your own screenshots with the same name in assets folder, it will fix the issue.)
+
+
+### TODO:
+------------------
+❌GUI
+✔️Buttons updates every season.
