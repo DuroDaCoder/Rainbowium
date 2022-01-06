@@ -1,7 +1,7 @@
 # Rainbowium
 
-![Commit](https://img.shields.io/github/last-commit/DuroDaCoder/Rainbowium)
-![CodeSize](https://img.shields.io/github/languages/code-size/DuroDaCoder/Rainbowium)
+[![Commit](https://img.shields.io/github/last-commit/DuroDaCoder/Rainbowium)](https://github.com/DuroDaCoder/Rainbowium)
+[![CodeSize](https://img.shields.io/github/languages/code-size/DuroDaCoder/Rainbowium)](https://github.com/DuroDaCoder/Rainbowium)
 
 
 ### Game Requirements
