@@ -2,7 +2,9 @@
 
 [![Commit](https://img.shields.io/github/last-commit/DuroDaCoder/Rainbowium)](https://github.com/DuroDaCoder/Rainbowium)
 [![CodeSize](https://img.shields.io/github/languages/code-size/DuroDaCoder/Rainbowium)](https://github.com/DuroDaCoder/Rainbowium)
-
+[![Issues](https://img.shields.io/github/issues/DuroDaCoder/Rainbowium)](https://github.com/DuroDaCoder/Rainbowium/issues)
+[![Discussions](https://img.shields.io/github/discussions/DuroDaCoder/Rainbowium)](https://github.com/DuroDaCoder/Rainbowium/discussions)
+[![Discord](https://img.shields.io/discord/833647567996321832?label=Join%20Discord)](https://discord.gg/uSttY72hB9)
 
 ### Game Requirements
 ------------------
