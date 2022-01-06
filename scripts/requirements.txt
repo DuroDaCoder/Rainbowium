@@ -1,0 +1,15 @@
+psutil
+colorama
+keyboard
+pyautogui
+unipath
+mouse
+pydirectinput
+winshell
+pypiwin32
+Pillow
+opencv-python
+gitpython
+pypresence
+anonfile
+playsound==1.2.2
