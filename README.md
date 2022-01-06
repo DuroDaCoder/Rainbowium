@@ -1,4 +1,7 @@
 # Rainbowium
+https://img.shields.io/github/downloads/DuroDaCoder/Rainbowium/total
+
+
 
 ### Game Requirements
 ------------------
