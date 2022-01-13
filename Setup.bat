@@ -113,8 +113,6 @@ goto modules
 color 0f
 cls
 echo Installing needed modules
-echo 
-echo 
 py -3.9 -m pip install --upgrade pip
 py -3.9 -m pip install psutil
 py -3.9 -m pip install colorama
