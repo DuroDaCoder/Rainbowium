@@ -31,18 +31,6 @@ def check1():
         Mbox('Error', "You didn't ran Setup.bat correctly, rerun it and complete instalation to proceed.",0)
         sys.exit()
 
-def check2():
-    with open('scripts\launcher_config.txt') as f:
-        if 'stm' in f.read():
-            webbrowser.open_new_tab(url1)
-        else:
-            with open('scripts\launcher_config.txt') as f:
-                if 'upl' in f.read():
-                    webbrowser.open_new_tab(url)
-                else:
-                    Mbox('Error', "You didn't ran Setup.bat correctly, rerun it and complete instalation to proceed.",0)
-                    sys.exit()
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setWindowIcon(QtGui.QIcon("assets\\rainbowium.png"))
@@ -179,7 +167,6 @@ class Ui_MainWindow(object):
 
 if __name__ == "__main__":
     check1()
-    check2()
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
