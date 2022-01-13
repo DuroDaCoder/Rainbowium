@@ -27,6 +27,20 @@ You must have game updated, or it will cause trouble. !!!
 ![image](https://user-images.githubusercontent.com/48152410/149362168-80133035-8e59-4bac-8a5f-767340fb3b48.png)
 >If you see this, just click 'More info' and then 'Run anyway'
 
+If the Python files stays blank after Setup.bat is complete do this:
+
+>Open Control panel
+>System and Security
+>System
+>Then in the left menu click— Advanced System Settings
+>When the small window opens click— Environment Variables
+>For the lower scroll box scroll to —path— and click it blue then—
+>Press edit
+>*DO NOT SCROLL INSIDE THAT BOX WITH YOUR MOUSE, ONLY USE THE ARROW KEYS TO MOVE THROUGH THE SELECTIONS UNTIL YOU FIND PYTHON.*
+>If its not in there go find your Pythonw files folder and add only the path not the file so it can find it. Be sure you leave the semicolon both in front of that path and after it.
+>It should look something like— last entry;c:\programs\Python\Python39;
+>Then make sure it works.
+
 
 
 ### SUPPORTED SOFTWARE/SETTINGS:
