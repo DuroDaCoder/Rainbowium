@@ -1,4 +1,4 @@
 @echo off
-py -3.9 GUI.pyw
+start GUI.pyw
 cls
 exit
