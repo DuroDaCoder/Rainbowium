@@ -24,7 +24,7 @@ You must have game updated, or it will cause trouble. !!!
 
 >(If you have problems, feel free to contact me here: roberthajduk1234@gmail.com)
 
-![image](https://user-images.githubusercontent.com/48152410/149362168-80133035-8e59-4bac-8a5f-767340fb3b48.png)
+![Untitled](https://user-images.githubusercontent.com/48152410/152682714-a099867a-5a36-4b49-846d-411bfebcfc29.png)
 >If you see this, just click 'More info' and then 'Run anyway'
 
 If the Python files stays blank after Setup.bat is complete do this:
