@@ -10,7 +10,7 @@
 ------------------
 >You must have DOC character unlocked, you get the most renown while playing for him.
 
->To have farm set-up, you need to have set this settings in matchmaking options. Not showed options must be set on "OFF".
+>To have farm set-up, you need to have set this settings in matchmaking options.
 ![setup](https://user-images.githubusercontent.com/48152410/152682714-a099867a-5a36-4b49-846d-411bfebcfc29.png)
 
 
