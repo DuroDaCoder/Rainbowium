@@ -11,7 +11,7 @@
 >You must have DOC character unlocked, you get the most renown while playing for him.
 
 >To have farm set-up, you need to have set this settings in matchmaking options. Not showed options must be set on "OFF".
-![setup](https://user-images.githubusercontent.com/48152410/139722773-dffd4175-f13a-4a01-bf09-c9f2f873fc0a.png)
+![setup](https://user-images.githubusercontent.com/48152410/152682714-a099867a-5a36-4b49-846d-411bfebcfc29.png)
 
 
 
@@ -24,7 +24,7 @@ You must have game updated, or it will cause trouble. !!!
 
 >(If you have problems, feel free to contact me here: roberthajduk1234@gmail.com)
 
-![Untitled](https://user-images.githubusercontent.com/48152410/152682714-a099867a-5a36-4b49-846d-411bfebcfc29.png)
+![image](https://user-images.githubusercontent.com/48152410/149362168-80133035-8e59-4bac-8a5f-767340fb3b48.png)
 >If you see this, just click 'More info' and then 'Run anyway'
 
 If the Python files stays blank after Setup.bat is complete do this:
