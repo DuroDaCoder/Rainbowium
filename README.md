@@ -46,11 +46,7 @@ You must set up Python as default!!!:
 
 >(Steam and Ubisoft Connect are now supported.)
 ___
->English language is required. (This will be needed always, but you can add your own screenshots with the same name in assets folder, it will fix the issue.)
-
->1920 x 1080 is required. (This will be needed always, but you can add your own screenshots with the same name in assets folder, it will fix the issue.)
-
->Fullscreen is required. (This will be needed always, but you can add your own screenshots with the same name in assets folder, it will fix the issue.)
+>English language, 1920 x 1080 resolution and Fullscreen is required (This will be needed always, but you can add your own screenshots with the same name in assets folder, it will fix the issue.)
 
 
 ### TODO:
