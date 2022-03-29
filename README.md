@@ -51,6 +51,5 @@ ___
 
 ### TODO:
 ------------------
-✔️GUI
-
-✔️Buttons updates every season.
+✔️Feature updates
+✔️Buttons updates every season
