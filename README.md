@@ -6,14 +6,6 @@
 [![Discussions](https://img.shields.io/github/discussions/DuroDaCoder/Rainbowium)](https://github.com/DuroDaCoder/Rainbowium/discussions)
 [![Discord](https://img.shields.io/discord/833647567996321832?label=Join%20Discord)](https://discord.gg/uSttY72hB9)
 
-### Game Requirements
-------------------
->You must have DOC character unlocked, you get the most renown while playing for him.
-
->To have farm set-up, you need to have set this settings in matchmaking options.
-![setup](https://user-images.githubusercontent.com/48152410/152682714-a099867a-5a36-4b49-846d-411bfebcfc29.png)
-
-
 
 ### SETUP
 ------------------
@@ -40,10 +32,16 @@ You must set up Python as default!!!:
 >Click 'Ok'
 
 
+### Game Requirements
+------------------
+>You must have DOC character unlocked, you get the most renown while playing for him.
+
+>To have farm set-up, you need to have set this settings in matchmaking options.
+![setup](https://user-images.githubusercontent.com/48152410/152682714-a099867a-5a36-4b49-846d-411bfebcfc29.png)
+
 
 ### SUPPORTED SOFTWARE/SETTINGS:
 ------------------
-
 >(Steam and Ubisoft Connect are now supported.)
 ___
 >English language, 1920 x 1080 resolution and Fullscreen is required (This will be needed always, but you can add your own screenshots with the same name in assets folder, it will fix the issue.)
