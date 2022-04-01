@@ -14,8 +14,9 @@ Rainbowium is created, uploaded by this way:
 
 ![Untitled](https://user-images.githubusercontent.com/48152410/161261482-8c62c1f1-dd27-4e2f-9534-62c1f2ae87b8.png)
 
-!!!In main upload page is source code, in relases is compiled Rainbowium for newbies.!!!
-!!!COMPILED VERSION IS RECOMENDED!!!
+>!!!In main upload page is source code, in relases is compiled Rainbowium for newbies.!!!
+
+>!!!COMPILED VERSION IS RECOMENDED!!!
 
 ### TODO:
 ------------------
