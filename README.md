@@ -8,7 +8,7 @@
 
 ### Welcome
 ------------------
-Welcome to project Rainbowium, it is afk farm for RainbowSixSiege wrote in Python.
+Welcome to project Rainbowium, it is afk farm for RainbowSixSiege written in Python.
 >For technical information, check Wiki.
 
 Rainbowium is created, uploaded by this way:
