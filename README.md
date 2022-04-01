@@ -19,7 +19,7 @@ Rainbowium is created, uploaded by this way:
 
 ![Untitled](https://user-images.githubusercontent.com/48152410/161262540-93e01d01-9afa-4685-8775-44fda70f196f.png)
 
->COMPILED VERSION IS RECOMENDED
+>COMPILED VERSION IS RECOMMENDED
 
 ### TODO:
 ------------------
