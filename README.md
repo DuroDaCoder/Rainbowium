@@ -6,46 +6,9 @@
 [![Discussions](https://img.shields.io/github/discussions/DuroDaCoder/Rainbowium)](https://github.com/DuroDaCoder/Rainbowium/discussions)
 [![Discord](https://img.shields.io/discord/833647567996321832?label=Join%20Discord)](https://discord.gg/uSttY72hB9)
 
-
-### SETUP
-------------------
-You must have game updated, or it will cause trouble. !!!
-
-1. To setup you need to run Setup.bat
-2. Then run Run.bat
-
->(If you have problems, feel free to contact me here: roberthajduk1234@gmail.com)
-
-![image](https://user-images.githubusercontent.com/48152410/149362168-80133035-8e59-4bac-8a5f-767340fb3b48.png)
->If you see this, just click 'More info' and then 'Run anyway'
-
-You must set up Python as default!!!:
-
->Right click *.py
-
->Click 'Open with'
-
->Click Choose another app
-
->Click on Python and click 'Always use this app to open .py files'
-
->Click 'Ok'
-
-
-### Game Requirements
-------------------
->You must have DOC character unlocked, you get the most renown while playing for him.
-
->To have farm set-up, you need to have set this settings in matchmaking options.
-![setup](https://user-images.githubusercontent.com/48152410/152682714-a099867a-5a36-4b49-846d-411bfebcfc29.png)
-
-
-### SUPPORTED SOFTWARE/SETTINGS:
-------------------
->(Steam and Ubisoft Connect are now supported.)
-___
->English language, 1920 x 1080 resolution and Fullscreen is required (This will be needed always, but you can add your own screenshots with the same name in assets folder, it will fix the issue.)
-
+### Welcome
+Welcome to project Rainbowium, it is afk farm for RainbowSixSiege wrote in Python.
+For technical information, check Wiki.
 
 ### TODO:
 ------------------
