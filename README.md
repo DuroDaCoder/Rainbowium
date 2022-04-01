@@ -6,6 +6,14 @@
 [![Discussions](https://img.shields.io/github/discussions/DuroDaCoder/Rainbowium)](https://github.com/DuroDaCoder/Rainbowium/discussions)
 [![Discord](https://img.shields.io/discord/833647567996321832?label=Join%20Discord)](https://discord.gg/uSttY72hB9)
 
+FAIR USE
+
+Copyright Disclaimer under section 107 of the Copyright Act 1976, allowance is made for “fair use” for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research.
+
+Fair use is a use permitted by copyright statute that might otherwise be infringing.
+
+Non-profit, educational or personal use tips the balance in favor of fair use.
+
 ### Welcome
 ------------------
 Welcome to the Rainbowium, it's an AFK farm for RainbowSixSiege that gains Renown written in Python.
