@@ -93,6 +93,7 @@ def checkIfProcessRunning(processName):
     return False;
 
 def error_pic(name, x, y):
+    global error
     print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+" BUTTON...")
     for i in range(120):
         if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.8):
@@ -104,6 +105,7 @@ def error_pic(name, x, y):
     error()
 
 def search_widget(name, x, y):
+    global error
     print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
     for i in range(120):
         if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.6):
@@ -116,6 +118,7 @@ def search_widget(name, x, y):
     
     
 def spec_doc(name, x, y):
+    global error
     print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
     for i in range(120):
         if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.5):
@@ -127,6 +130,7 @@ def spec_doc(name, x, y):
     error()
     
 def longwait(name, x, y):
+    global error
     print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
     for i in range(500):
         if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.9):
@@ -138,6 +142,7 @@ def longwait(name, x, y):
     error()
     
 def longwait2(name, x, y):
+    global error
     print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
     for i in range(500):
         if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.9):
