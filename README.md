@@ -15,6 +15,7 @@ Rainbowium is uploaded this way:
 
 ![Untitled](https://user-images.githubusercontent.com/48152410/161261482-8c62c1f1-dd27-4e2f-9534-62c1f2ae87b8.png)
 ___
+https://www.youtube.com/watch?v=I3X5_K4geTc
 >In main upload page is source code, in relases is compiled Rainbowium for newbies. Download .exe and run it, no need to install anything.
 
 ![Untitled](https://user-images.githubusercontent.com/48152410/161262540-93e01d01-9afa-4685-8775-44fda70f196f.png)
