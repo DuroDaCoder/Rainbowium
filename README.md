@@ -9,7 +9,7 @@
 ### Welcome
 ------------------
 Welcome to the Rainbowium, it's an AFK farm for RainbowSixSiege that gains Renown written in Python.
->For technical information, check Wiki.
+For technical information or help, check Wiki.
 
 Rainbowium is uploaded this way:
 
