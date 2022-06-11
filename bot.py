@@ -96,24 +96,34 @@ def error_pic(name, x, y):
     global error
     print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+" BUTTON...")
     for i in range(120):
-        if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.8):
-            print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
-            print('\033[39m')
-            return
-        else:
-            time.sleep(0.5)
+        try:
+            if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.8):
+                print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
+                print('\033[39m')
+                return
+            else:
+                time.sleep(0.5)
+        except IOError:
+            print("[!] UAC detected!")
+            time.sleep(2)
+            pass
     error()
 
 def search_widget(name, x, y):
     global error
     print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
     for i in range(120):
-        if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.6):
-            print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
-            print('\033[39m')
-            return
-        else:
-            time.sleep(0.5)
+        try:
+            if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.6):
+                print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
+                print('\033[39m')
+                return
+            else:
+                time.sleep(0.5)
+        except IOError:
+            print("[!] UAC detected!")
+            time.sleep(2)
+            pass
     error()
     
     
@@ -121,36 +131,51 @@ def spec_doc(name, x, y):
     global error
     print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
     for i in range(120):
-        if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.5):
-            print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
-            print('\033[39m')
-            return
-        else:
-            time.sleep(0.5)
+        try:
+            if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.5):
+                print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
+                print('\033[39m')
+                return
+            else:
+                time.sleep(0.5)
+        except IOError:
+            print("[!] UAC detected!")
+            time.sleep(2)
+            pass
     error()
     
 def longwait(name, x, y):
     global error
     print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
     for i in range(500):
-        if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.9):
-            print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
-            print('\033[39m')
-            return
-        else:
-            time.sleep(0.5)
+        try:
+            if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.9):
+                print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
+                print('\033[39m')
+                return
+            else:
+                time.sleep(0.5)
+        except IOError:
+            print("[!] UAC detected!")
+            time.sleep(2)
+            pass
     error()
     
 def longwait2(name, x, y):
     global error
     print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
     for i in range(500):
-        if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.9):
-            print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
-            print('\033[39m')
-            return
-        else:
-            time.sleep(0.5)
+        try:
+            if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.9):
+                print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
+                print('\033[39m')
+                return
+            else:
+                time.sleep(0.5)
+        except IOError:
+            print("[!] UAC detected!")
+            time.sleep(2)
+            pass
     error()
     
 def error():
