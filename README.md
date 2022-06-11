@@ -13,8 +13,9 @@ For technical information or help, check Wiki.
 
 Rainbowium is uploaded this way:
 
-!!BUILDS ARE NO LONGER RELASED!!
 ![Untitled](https://user-images.githubusercontent.com/48152410/161261482-8c62c1f1-dd27-4e2f-9534-62c1f2ae87b8.png)
+
+!!BUILDS ARE NO LONGER RELASED!!
 ___
 >In main upload page is source code, in relases is compiled Rainbowium for newbies. Download .exe and run it, no need to install anything.
 
