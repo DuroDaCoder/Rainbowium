@@ -71,8 +71,8 @@ def rpc_update():
 
                 large_image = "rainbowium",
                 large_text="Rainbowium",
-                small_image="durodacoder",
-                small_text="DuroDaCoder#6210",
+                small_image="bobthecoder",
+                small_text="BobTheCoder#6210",
 
                 buttons = [
                     {"label": "Visit the Github", "url": "https://github.com/DuroDaCoder/Rainbowium"},
