@@ -39,7 +39,7 @@ goto py
 cls
 
 :rerun
-if exist del scripts\launcher_config.txt
+if exist scripts\launcher_config.txt del scripts\launcher_config.txt
 if exist scripts\launcher_config.txt goto averror
 cls
 CHOICE /C SU /M "Do you have R6S installed by Steam or Ubisoft Connect (S/U)?"
