@@ -17,14 +17,11 @@ Rainbowium is uploaded this way:
 
 !!BUILDS ARE NO LONGER RELASED!!
 ___
->In main upload page is source code, in relases is compiled Rainbowium for newbies. Download .exe and run it, no need to install anything.
 
 ![Untitled](https://user-images.githubusercontent.com/48152410/161262540-93e01d01-9afa-4685-8775-44fda70f196f.png)
 
 ![Untitled](https://user-images.githubusercontent.com/48152410/161263046-d817f170-ad9b-4af5-b21e-70eaf533ad0c.png)
 ___
-
->COMPILED VERSION IS RECOMMENDED
 
 Youtube Video:
 
