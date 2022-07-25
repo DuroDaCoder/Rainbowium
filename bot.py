@@ -334,7 +334,7 @@ except Exception:
 
 while 1:
     round_print()
-    search_widget('Locations', 278, 392)
+    search_widget('Locations', 200, 200)
     pdi.press("down")
     time.sleep(0.2)
     pdi.press("down")
