@@ -69,7 +69,7 @@ def rpc_update():
         pass
     try:
         RPC.update(
-                                details="Rainbowium - R6S Renown Farm",
+                details="Rainbowium - R6S Renown Farm",
                 state="Farm Runtime:", start=start_time,
 
                 large_image = "rainbowium",
