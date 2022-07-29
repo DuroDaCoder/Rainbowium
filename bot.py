@@ -80,6 +80,7 @@ def rpc_update():
                 buttons = [
                     {"label": "Visit the Github", "url": "https://github.com/DuroDaCoder/Rainbowium"},
                     {"label": "Join Creator's Discord", "url": "https://discord.gg/uSttY72hB9"}
+                ]
 )
     except Exception:
         pass
