@@ -80,12 +80,22 @@ def rpc_update():
                 buttons = [
                     {"label": "Visit the Github", "url": "https://github.com/DuroDaCoder/Rainbowium"},
                     {"label": "Join Creator's Discord", "url": "https://discord.gg/uSttY72hB9"}
-
-        ]
+                ]
 )
     except Exception:
         pass
+        
+def setresNative():
 
+        devmode = pywintypes.DEVMODEType()
+
+        devmode.PelsWidth = 1920
+        devmode.PelsHeight = 1080
+
+        devmode.Fields = win32con.DM_PELSWIDTH | win32con.DM_PELSHEIGHT
+
+        win32api.ChangeDisplaySettings(devmode, 0)
+ 
 def checkIfProcessRunning(processName):
     for proc in psutil.process_iter():
         try:
