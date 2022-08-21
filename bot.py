@@ -248,7 +248,7 @@ def shootfunction():
                 keyboard.press(key)
                 time.sleep(0.2)
                 keyboard.release(key)
-            if pyautogui.locateOnScreen('assets\\primary.png', confidence=0.9):
+            if pyautogui.locateOnScreen('assets\\primary.png', confidence=0.7):
                 break
     except Exception:
         error()
@@ -256,12 +256,9 @@ def shootfunction():
     print(Fore.CYAN+ "Shooting whole Secondary weapon...")
     print('\033[39m')
     try:
-        for i in range(42):
-            for i in range(1000):
-                keyboard.press(key)
-                keyboard.release(key)
-        if pyautogui.locateOnScreen('assets\\sec.png', confidence=0.9):
-            return
+        for i in range(20100):
+            keyboard.press(key)
+            keyboard.release(key)
     except Exception:
         error()
 
@@ -334,7 +331,7 @@ except Exception:
 
 while 1:
     round_print()
-    search_widget('Locations', 200, 200)
+    search_widget('Locations', 278, 392)
     pdi.press("down")
     time.sleep(0.2)
     pdi.press("down")
@@ -345,19 +342,12 @@ while 1:
     spec_doc('Operators', 520, 419)
     two()
     search_widget('Loadout', 292, 302)
-    pdi.press("down")
-    pdi.press("right")
-    pdi.press("right")
-    pdi.press("down")
-    pdi.press("left")
-    pdi.press("up")
-    pdi.press("up")
     pdi.press("enter")
     shootfunction()
-    longwait2('Bonus', 460, 175)
+    longwait2('Bonus', 461, 171)
     time.sleep(0.2)
     pdi.press("tab")
-    search_widget('Retry', 1350, 990)
+    search_widget('Retry', 1053, 817)
     time.sleep(0.5)
     pdi.press("enter")
     pdi.press("enter")
