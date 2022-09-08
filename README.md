@@ -13,12 +13,6 @@ ___
 **_Before requesting support or using Rainbowium, make sure you read [Rainbowium WiKi Page](https://github.com/DuroDaCoder/Rainbowium/wiki)_**!
 ___
 
-
-
-
-
-
-
 ![Untitled](https://user-images.githubusercontent.com/48152410/161262540-93e01d01-9afa-4685-8775-44fda70f196f.png)
 
 ![Untitled](https://user-images.githubusercontent.com/48152410/161263046-d817f170-ad9b-4af5-b21e-70eaf533ad0c.png)
