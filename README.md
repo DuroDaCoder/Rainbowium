@@ -12,12 +12,12 @@ Welcome to the Rainbowium, it's an AFK farm for RainbowSixSiege that gains Renow
 ___
 **_Before requesting support or using Rainbowium, make sure you read [Rainbowium WiKi Page](https://github.com/DuroDaCoder/Rainbowium/wiki)_**!
 ___
-Rainbowium is uploaded this way:
 
-![Untitled](https://user-images.githubusercontent.com/48152410/161261482-8c62c1f1-dd27-4e2f-9534-62c1f2ae87b8.png)
 
-!!BUILDS ARE NO LONGER RELASED!!
-___
+
+
+
+
 
 ![Untitled](https://user-images.githubusercontent.com/48152410/161262540-93e01d01-9afa-4685-8775-44fda70f196f.png)
 
