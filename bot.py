@@ -223,45 +223,6 @@ def two():
     time.sleep(0.2)
     pdi.press("enter")
 
-def shootfunction():
-    global error
-    try:
-        for i in range(50):
-            try:
-                if pyautogui.locateOnScreen('assets\\reinforce.png', confidence=0.9):
-                    print(Fore.GREEN+ "[-] FOUND REINFORCE ICON!")
-                    print('\033[39m')
-                    break
-                else:
-                    time.sleep(0.5)
-            except IOError:
-                print("[!] UAC detected!")
-                time.sleep(2)
-                pass
-    except Exception:
-        error()
-    print(Fore.CYAN+ "Shooting whole Primary weapon...")
-    print('\033[39m')
-    try:
-        for i in range(20):
-            for i in range(120):
-                keyboard.press(key)
-                time.sleep(0.2)
-                keyboard.release(key)
-            if pyautogui.locateOnScreen('assets\\primary.png', confidence=0.7):
-                break
-    except Exception:
-        error()
-
-    print(Fore.CYAN+ "Shooting whole Secondary weapon...")
-    print('\033[39m')
-    try:
-        for i in range(20100):
-            keyboard.press(key)
-            keyboard.release(key)
-    except Exception:
-        error()
-
 def round_print():
     global roundcount
     roundcount = roundcount + 1
@@ -343,7 +304,6 @@ while 1:
     two()
     search_widget('Loadout', 292, 302)
     pdi.press("enter")
-    shootfunction()
     longwait2('Bonus', 461, 171)
     time.sleep(0.2)
     pdi.press("tab")
