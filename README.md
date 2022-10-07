@@ -27,10 +27,12 @@ Youtube Video:
 ✔️Feature updates
 ✔️Buttons updates every season
 ------------------
-FAIR USE
+Warning:
 
-Copyright Disclaimer under section 107 of the Copyright Act 1976, allowance is made for “fair use” for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research.
-
-Fair use is a use permitted by copyright statute that might otherwise be infringing.
-
-Non-profit, educational or personal use tips the balance in favor of fair use.
+All rights granted under this License are granted for the term of
+copyright on the Program, and are irrevocable provided the stated
+conditions are met.  This License explicitly affirms your unlimited
+permission to run the unmodified Program.  The output from running a
+covered work is covered by this License only if the output, given its
+content, constitutes a covered work.  This License acknowledges your
+rights of fair use or other equivalent, as provided by copyright law.
