@@ -22,7 +22,15 @@ from random import randint
 from time import sleep
 from colorama import Fore, Back, Style
 from playsound import playsound
+from os.path import exists
 colorama.init()
+def filenotfound():
+    print()
+    print('It looks like you deleted/renamed/moved "Run.bat" file.')
+    print("Please move this file back or rename it!")
+    input("Press Any Key to continue...")
+    sys.exit()
+
 bad_colors = ['BLACK', 'LIGHTBLACK_EX', 'GREY', 'RESET', 'WHITE']
 stm = "Steam"
 upl = "Ubisoft_Connect"
@@ -31,8 +39,14 @@ url1 = "steam://rungameid/359550"
 client_id = '922380828540026880'
 roundcount = 0
 keyboard = Controller()
-key = "0"
-
+try:
+    runfilepath = (os.getcwd()+"\Run.bat")
+    runfilestat = os.stat(runfilepath)
+except Exception:
+    filenotfound()
+finalrunfilesize = int(runfilestat.st_size)
+maxsize = 300
+minsize = 250
 text = """   
         ██████╗  █████╗ ██╗███╗   ██╗██████╗  ██████╗ ██╗    ██╗██╗██╗   ██╗███╗   ███╗
         ██╔══██╗██╔══██╗██║████╗  ██║██╔══██╗██╔═══██╗██║    ██║██║██║   ██║████╗ ████║
@@ -186,8 +200,7 @@ def error():
     print("We were unable to find the button, restarting code.")
     print("Please Wait...")
     time.sleep(5)
-    script_path = os.path.abspath(__file__)
-    os.startfile(script_path)
+    os.startfile(runfilepath)
     sys.exit()
 
 def one():
@@ -229,13 +242,36 @@ def round_print():
     print(Fore.MAGENTA+ "---------", "[Round:" ,str(roundcount)+"]", "---------")
     print('\033[39m')
 
-if os.path.isfile('scripts\launcher_config.txt'):
+if os.path.isfile('scripts\config.txt'):
     print("Config was found!")
     print()
 else:
     print("You didn't ran Setup.bat correctly, rerun it and complete instalation to proceed.")
     time.sleep(30)
     sys.exit()
+
+if runfilestat.st_size > maxsize:
+    with open('scripts\config.txt') as f:
+        if not 'userwarned' in f.read():
+            print()
+            print('It looks like you modified "Run.bat" file in Rainbowium directory.')
+            print()
+            print('We recommend you to Redownload/Copy ORIGINAL "Run.bat" script from our page - https://github.com/DuroDaCoder/Rainbowium')
+            input("Press Any Key to continue and don't show this message again...")
+            confrewrite = open('scripts\config.txt', 'a')
+            confrewrite.write("userwarned \n")
+            confrewrite.close()
+if runfilestat.st_size < minsize:
+    with open('scripts\config.txt') as f:
+        if not 'userwarned' in f.read():
+            print()
+            print('It looks like you modified "Run.bat" file in Rainbowium directory.')
+            print()
+            print('We recommend you to Redownload/Copy ORIGINAL "Run.bat" script from our page - https://github.com/DuroDaCoder/Rainbowium')
+            input("Press Any Key to continue and don't show this message again...")
+            confrewrite = open('scripts\config.txt', 'a')
+            confrewrite.write("userwarned \n")
+            confrewrite.close()
     
 if checkIfProcessRunning('RainbowSix'):
     os.system('start cmd /c "taskkill /f /im RainbowSix.exe /t"')
@@ -245,11 +281,11 @@ else:
     print('RainbowSixSiege is not running, starting it.')
     time.sleep(2)
 
-with open('scripts\launcher_config.txt') as f:
+with open('scripts\config.txt') as f:
     if 'stm' in f.read():
         webbrowser.open_new_tab(url1)
     else:
-        with open('scripts\launcher_config.txt') as f:
+        with open('scripts\config.txt') as f:
             if 'upl' in f.read():
                 webbrowser.open_new_tab(url)
             else:
