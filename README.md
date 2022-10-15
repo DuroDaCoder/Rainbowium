@@ -28,8 +28,7 @@ Youtube Video:
 ------------------
 Warning:
 
-              
-              (GNU General Public License v3.0)
+    (GNU General Public License v3.0)
 All rights granted under this License are granted for the term of
 copyright on the Program, and are irrevocable provided the stated
 conditions are met.  This License explicitly affirms your unlimited
