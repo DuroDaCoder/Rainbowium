@@ -45,7 +45,7 @@ try:
 except Exception:
     filenotfound()
 finalrunfilesize = int(runfilestat.st_size)
-maxsize = 300
+maxsize = 330
 minsize = 250
 text = """   
         ██████╗  █████╗ ██╗███╗   ██╗██████╗  ██████╗ ██╗    ██╗██╗██╗   ██╗███╗   ███╗
