@@ -1,64 +1,40 @@
-import math
-import keyboard
+import cv2
 import psutil
 import pyautogui
 import os
 import time
-import datetime
 import random
 import sys
-import PIL
 import pydirectinput as pdi
-import win32gui, win32con
-import winshell
 import os.path
 import webbrowser
 import colorama
-from pynput.keyboard import Key, Controller
+import logging
+from pynput.keyboard import Controller
+from colorama import Fore
+
 pdi.FAILSAFE = False
-
-from pypresence import Presence
-from random import randint
-from time import sleep
-from colorama import Fore, Back, Style
-from playsound import playsound
-from os.path import exists
 colorama.init()
-def filenotfound():
-    print()
-    print('It looks like you deleted/renamed/moved "Run.bat" file.')
-    print("Please move this file back or rename it!")
-    input("Press Any Key to continue...")
-    sys.exit()
-
-bad_colors = ['BLACK', 'LIGHTBLACK_EX', 'GREY', 'RESET', 'WHITE']
-stm = "Steam"
-upl = "Ubisoft_Connect"
-url = "uplay://launch/635"
-url1 = "steam://rungameid/359550"
-client_id = '922380828540026880'
-roundcount = 0
 keyboard = Controller()
-try:
-    runfilepath = (os.getcwd()+"\Run.bat")
-    runfilestat = os.stat(runfilepath)
-except Exception:
-    filenotfound()
-finalrunfilesize = int(runfilestat.st_size)
-maxsize = 330
-minsize = 250
+logging.basicConfig(filename="log.txt",
+                    filemode='a',
+                    format='%(asctime)s - %(message)s',
+                    datefmt='%H:%M:%S',
+                    level=logging.DEBUG)
+logging.info("Fresh Start of The Script!")
+bad_colors = ['BLACK', 'LIGHTBLACK_EX', 'GREY', 'RESET', 'WHITE']
+ubisoft_connect, steam, client_id, round_count = "uplay://launch/635", "steam://rungameid/359550", '922380828540026880', 0
+cloud_sync_delay = 10
 text = """   
-        ██████╗  █████╗ ██╗███╗   ██╗██████╗  ██████╗ ██╗    ██╗██╗██╗   ██╗███╗   ███╗
-        ██╔══██╗██╔══██╗██║████╗  ██║██╔══██╗██╔═══██╗██║    ██║██║██║   ██║████╗ ████║
-        ██████╔╝███████║██║██╔██╗ ██║██████╔╝██║   ██║██║ █╗ ██║██║██║   ██║██╔████╔██║
-        ██╔══██╗██╔══██║██║██║╚██╗██║██╔══██╗██║   ██║██║███╗██║██║██║   ██║██║╚██╔╝██║
-        ██║  ██║██║  ██║██║██║ ╚████║██████╔╝╚██████╔╝╚███╔███╔╝██║╚██████╔╝██║ ╚═╝ ██║
-        ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚═╝ ╚═════╝ ╚═╝     ╚═╝
-
-    """
+ ██████╗  █████╗ ██╗███╗   ██╗██████╗  ██████╗ ██╗    ██╗██╗██╗   ██╗███╗   ███╗
+ ██╔══██╗██╔══██╗██║████╗  ██║██╔══██╗██╔═══██╗██║    ██║██║██║   ██║████╗ ████║
+ ██████╔╝███████║██║██╔██╗ ██║██████╔╝██║   ██║██║ █╗ ██║██║██║   ██║██╔████╔██║
+ ██╔══██╗██╔══██║██║██║╚██╗██║██╔══██╗██║   ██║██║███╗██║██║██║   ██║██║╚██╔╝██║
+ ██║  ██║██║  ██║██║██║ ╚████║██████╔╝╚██████╔╝╚███╔███╔╝██║╚██████╔╝██║ ╚═╝ ██║
+ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚═╝ ╚═════╝ ╚═╝     ╚═╝
+"""
 
 text2 = """   
-
   _                     _ _             
  | |                   | (_)            
  | |     ___   __ _  __| |_ _ __   __ _ 
@@ -67,38 +43,11 @@ text2 = """
  |______\___/ \__,_|\__,_|_|_| |_|\__, |
                                    __/ |
                                   |___/ 
-
-    """
-
+"""
 codes = vars(colorama.Fore)
 colors = [codes[color] for color in codes if color not in bad_colors]
 colored_chars = [random.choice(colors) + char for char in text2]
-print(''.join(colored_chars))
-print('\033[39m')
 
-def rpc_update():
-    try:
-        RPC.connect()
-    except Exception:
-        pass
-    try:
-        RPC.update(
-                details="Rainbowium - R6S Renown Farm",
-                state="Farm Runtime:", start=start_time,
-
-                large_image = "rainbowium",
-                large_text="Rainbowium",
-                small_image="bobthecoder",
-                small_text="BobTheCoder#6210",
-
-                buttons = [
-                    {"label": "Visit the Github", "url": "https://github.com/DuroDaCoder/Rainbowium"},
-                    {"label": "Join Creator's Discord", "url": "https://discord.gg/uSttY72hB9"}
-
-        ]
-)
-    except Exception:
-        pass
 
 def checkIfProcessRunning(processName):
     for proc in psutil.process_iter():
@@ -107,246 +56,153 @@ def checkIfProcessRunning(processName):
                 return True
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
             pass
-    return False;
+    return False
 
-def error_pic(name, x, y):
-    global error
-    print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+" BUTTON...")
-    for i in range(120):
+
+def locate_onScreen(name, confidence, length):
+    if not confidence > 0 < 1.1:
+        return False
+    if not os.path.isfile(f"assets\\{name}"):
+        return False
+    print(Fore.CYAN + "[.] LOOKING FOR " + str(name) + "" + " BUTTON...")
+    for i in range(length):
         try:
-            if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.8):
-                print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
+            if pyautogui.locateOnScreen(f'assets\\{name}', confidence=confidence):
+                print(Fore.GREEN + "[-] FOUND " + str(name) + "" + " BUTTON!")
                 print('\033[39m')
-                return
+                return True
             else:
-                time.sleep(0.5)
+                time.sleep(1)
+                pass
         except IOError:
             print("[!] UAC detected!")
+            logging.info(
+                "User Account Control (UAC) detected on a screen, returning one scan of the image (This may be spammed in a log for a while)!")
             time.sleep(2)
             pass
     error()
 
-def search_widget(name, x, y):
-    global error
-    print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
-    for i in range(120):
-        try:
-            if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.6):
-                print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
-                print('\033[39m')
-                return
-            else:
-                time.sleep(0.5)
-        except IOError:
-            print("[!] UAC detected!")
-            time.sleep(2)
-            pass
-    error()
-    
-    
-def spec_doc(name, x, y):
-    global error
-    print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
-    for i in range(120):
-        try:
-            if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.5):
-                print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
-                print('\033[39m')
-                return
-            else:
-                time.sleep(0.5)
-        except IOError:
-            print("[!] UAC detected!")
-            time.sleep(2)
-            pass
-    error()
-    
-def longwait(name, x, y):
-    global error
-    print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
-    for i in range(500):
-        try:
-            if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.9):
-                print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
-                print('\033[39m')
-                return
-            else:
-                time.sleep(0.5)
-        except IOError:
-            print("[!] UAC detected!")
-            time.sleep(2)
-            pass
-    error()
-    
-def longwait2(name, x, y):
-    global error
-    print(Fore.CYAN+ "[.] LOOKING FOR "+str(name)+""+" BUTTON...")
-    for i in range(500):
-        try:
-            if pyautogui.locateOnScreen(f'assets\\{name}.png', confidence=0.9):
-                print(Fore.GREEN+ "[-] FOUND "+str(name)+""+" BUTTON!")
-                print('\033[39m')
-                return
-            else:
-                time.sleep(0.5)
-        except IOError:
-            print("[!] UAC detected!")
-            time.sleep(2)
-            pass
-    error()
-    
+
+def press_buttons(button, amount, delay_between, delay_on_the_end):
+    for i in range(int(amount)):
+        pdi.press(str(button))
+        if delay_between is not None:
+            time.sleep(delay_between)
+    if delay_on_the_end is not None:
+        time.sleep(delay_on_the_end)
+    return True
+
+
+def press_button(button, delay_on_the_end):
+    pdi.press(str(button))
+    if delay_on_the_end is not None:
+        time.sleep(delay_on_the_end)
+    return True
+
+
 def error():
-    print()
-    print("We were unable to find the button, restarting code.")
-    print("Please Wait...")
+    logging.info("Error was triggered, script will probably restart!")
+    print("\nWe were unable to find the button, restarting code.\nPlease Wait...")
     time.sleep(5)
-    os.startfile(runfilepath)
-    sys.exit()
+    if not os.path.exists(os.getcwd() + "\Run.bat") and not os.stat(str(os.getcwd() + "\Run.bat")):
+        print(
+            '\nIt looks like you deleted/renamed/moved "Run.bat" file.\nPlease move this file back or rename it!')
+        input("Press any key to exit...")
+        sys.exit(1)
+    os.startfile(os.getcwd()+"\\Run.bat")
+    sys.exit(1)
 
-def one():
-    time.sleep(5)
-    pdi.press("up")
-    pdi.press("up")
-    pdi.press("up")
-    pdi.press("up")
-    pdi.press("up")
-    pdi.press("up")
-    pdi.press("up")
-    pdi.press("up")
-    pdi.press("up")
-    pdi.press("up")
-    pdi.press("up")
-    pdi.press("down")
-    pdi.press("left")
-    pdi.press("left")
-    pdi.press("enter")
-    time.sleep(1)
-
-def two():
-    time.sleep(0.5)
-    pdi.press("down")
-    time.sleep(2)
-    pdi.press("right")
-    time.sleep(0.2)
-    pdi.press("right")
-    time.sleep(0.2)
-    pdi.press("right")
-    time.sleep(0.2)
-    pdi.press("right")
-    time.sleep(0.2)
-    pdi.press("enter")
 
 def round_print():
-    global roundcount
-    roundcount = roundcount + 1
-    print(Fore.MAGENTA+ "---------", "[Round:" ,str(roundcount)+"]", "---------")
+    global round_count
+    round_count = round_count + 1
+    print(Fore.MAGENTA + "---------", "[Round:", str(round_count) + "]", "---------")
     print('\033[39m')
 
-if os.path.isfile('scripts\config.txt'):
-    print("Config was found!")
-    print()
-else:
-    print("You didn't ran Setup.bat correctly, rerun it and complete instalation to proceed.")
-    time.sleep(30)
-    sys.exit()
 
-if runfilestat.st_size > maxsize:
-    with open('scripts\config.txt') as f:
-        if not 'userwarned' in f.read():
-            print()
-            print('It looks like you modified "Run.bat" file in Rainbowium directory.')
-            print()
-            print('We recommend you to Redownload/Copy ORIGINAL "Run.bat" script from our page - https://github.com/DuroDaCoder/Rainbowium')
-            input("Press Any Key to continue and don't show this message again...")
-            confrewrite = open('scripts\config.txt', 'a')
-            confrewrite.write("userwarned \n")
-            confrewrite.close()
-if runfilestat.st_size < minsize:
-    with open('scripts\config.txt') as f:
-        if not 'userwarned' in f.read():
-            print()
-            print('It looks like you modified "Run.bat" file in Rainbowium directory.')
-            print()
-            print('We recommend you to Redownload/Copy ORIGINAL "Run.bat" script from our page - https://github.com/DuroDaCoder/Rainbowium')
-            input("Press Any Key to continue and don't show this message again...")
-            confrewrite = open('scripts\config.txt', 'a')
-            confrewrite.write("userwarned \n")
-            confrewrite.close()
-    
-if checkIfProcessRunning('RainbowSix'):
-    os.system('start cmd /c "taskkill /f /im RainbowSix.exe /t"')
-    print("Killed RainbowSixSiege, waiting 10sec for Cloud Sync.")
-    time.sleep(10)
-else:
-    print('RainbowSixSiege is not running, starting it.')
-    time.sleep(2)
-
-with open('scripts\config.txt') as f:
-    if 'stm' in f.read():
-        webbrowser.open_new_tab(url1)
+def setup():
+    if not os.path.isfile("config.txt"):
+        result = input(Fore.YELLOW + "Do you use Steam or Ubisoft Connect as an R6S Game Launcher? s/u: ")
+        print('\033[39m')
+        if result != "s" and result != "u":
+            logging.info("Wrong option selected in the config.txt setup, exiting!")
+            print(Fore.RED + "Wrong option selected!")
+            input("Press any key to exit...")
+            sys.exit(1)
+        f = open("config.txt", "a")
+        f.write(result)
+        f.close()
+    if checkIfProcessRunning('RainbowSix'):
+        os.system('start cmd /c "taskkill /f /im RainbowSix.exe /t"')
+        print(f"Killed Rainbow Six Siege, waiting {cloud_sync_delay}sec. for Ubisoft/Steam Cloud Sync.")
+        time.sleep(cloud_sync_delay)
     else:
-        with open('scripts\config.txt') as f:
-            if 'upl' in f.read():
-                webbrowser.open_new_tab(url)
-            else:
-                print()
-                print("You didn't ran Setup.bat correctly, rerun it and complete instalation to proceed.")
-                time.sleep(30)
-                sys.exit()
+        print('RainbowSixSiege is not running, starting it.')
+        time.sleep(2)
+    print_empty(20)
+    with open('config.txt') as f:
+        config_content = f.read()
+        if 's' in config_content:
+            webbrowser.open_new_tab(steam)
+            return True
+        if 'u' in config_content:
+            webbrowser.open_new_tab(ubisoft_connect)
+            return True
+        else:
+            print("Config Error!")
+            logging.info("There was no u/s written in the config, but the script ran here? Fascinating!")
+            sys.exit(1)
 
-start_time=time.time()
 
-try:
-    RPC = Presence(client_id)
-except Exception:
-        pass
+def print_empty(amount):
+    for i in range(amount):
+        print()
 
-os.system('cls' if os.name == 'nt' else 'clear')
+
+def enter_the_game():
+    if locate_onScreen("cogs.png", 0.8, 500):
+        press_buttons("up", 10, 0.2, None)
+        press_button("down", 0.2)
+        press_button("enter", 1)
+        press_buttons("right", 2, 0.2, None)
+        press_button("down", 0.2)
+        press_button("enter", 1)
+        press_button("right", 0.3)
+        press_button("enter", 1)
+        press_buttons("f", 2, 0.5, None)
+        press_button("right", 0.2)
+    if locate_onScreen("difficulty.png", 0.8, 20):
+        press_button("enter", None)
+
+
+def game_loop():
+    while True:
+        round_print()
+        if locate_onScreen("cogs.png", 0.8, 100):
+            press_buttons("enter", 3, 0.5, None)
+        if locate_onScreen("bonus.png", 0.8, 500):
+            press_button("tab", 1)
+            press_button("enter", None)
+
+
+print(''.join(colored_chars))
+print('\033[39m')
+setup()
+start_time = time.time()
+
 codes = vars(colorama.Fore)
 colors = [codes[color] for color in codes if color not in bad_colors]
 colored_lines = [random.choice(colors) + line for line in text.split('\n')]
 print('\n'.join(colored_lines))
 print('\033[39m')
 
-longwait('Menu', 172, 319)
-one()
-error_pic('Training', 1333, 382)
-pdi.press("left")
-pdi.press("enter")
-time.sleep(1)
-search_widget('LoneWolf', 1333, 382)
-pdi.press("f")
-pdi.press("f")
-pdi.press("left")
-pdi.press("enter")
+enter_the_game()
 time.sleep(5)
 
 try:
-    rpc_update()
-except Exception:
-    pass
-
-try:
-    while 1:
-        round_print()
-        search_widget('Locations', 278, 392)
-        pdi.press("down")
-        time.sleep(0.2)
-        pdi.press("down")
-        time.sleep(0.2)
-        pdi.press("down")
-        time.sleep(0.2)
-        pdi.press("enter")
-        spec_doc('Operators', 520, 419)
-        two()
-        search_widget('Loadout', 292, 302)
-        pdi.press("enter")
-        longwait2('Bonus', 461, 171)
-        time.sleep(0.2)
-        pdi.press("tab")
-        search_widget('Retry', 1053, 817)
-        time.sleep(0.5)
-        pdi.press("enter")
-        pdi.press("enter")
-except Exception:
+    game_loop()
+except Exception as e:
+    print(e)
     error()
+
+logging.info("You got to the end of the script, Fascinating!")
