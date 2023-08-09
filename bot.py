@@ -195,6 +195,7 @@ colors = [codes[color] for color in codes if color not in bad_colors]
 colored_lines = [random.choice(colors) + line for line in text.split('\n')]
 print('\n'.join(colored_lines))
 print('\033[39m')
+print("We advise you to minimalise this window.")
 
 enter_the_game()
 time.sleep(5)
