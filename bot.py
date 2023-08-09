@@ -101,7 +101,7 @@ def press_button(button, delay_on_the_end):
 
 
 def error():
-    logging.info("Error was triggered, script will probably restart!")
+    logging.info("Error was triggered, script was restarted!")
     print("\nWe were unable to find the button, restarting code.\nPlease Wait...")
     time.sleep(5)
     if not os.path.exists(os.getcwd() + "\Run.bat") and not os.stat(str(os.getcwd() + "\Run.bat")):
@@ -170,16 +170,17 @@ def enter_the_game():
         press_button("right", 0.3)
         press_button("enter", 1)
         press_buttons("f", 2, 0.5, None)
-        press_button("right", 0.2)
-    if locate_onScreen("difficulty.png", 0.8, 20):
+        press_button("right", 0.5)
+    if locate_onScreen("rewards.png", 0.8, 20):
         press_button("enter", None)
 
 
 def game_loop():
     while True:
         round_print()
-        if locate_onScreen("cogs.png", 0.8, 100):
-            press_buttons("enter", 3, 0.5, None)
+        if locate_onScreen("cogs.png", 0.6, 100):
+            time.sleep(1.5)
+            press_buttons("enter", 3, 1, None)
         if locate_onScreen("bonus.png", 0.8, 500):
             press_button("tab", 1)
             press_button("enter", None)
@@ -195,7 +196,7 @@ colors = [codes[color] for color in codes if color not in bad_colors]
 colored_lines = [random.choice(colors) + line for line in text.split('\n')]
 print('\n'.join(colored_lines))
 print('\033[39m')
-print("We advise you to minimalise this window.")
+print("We advise you to minimize this window.")
 
 enter_the_game()
 time.sleep(5)
