@@ -10,11 +10,11 @@
 ------------------
 Welcome to the Rainbowium, it's an AFK farm for RainbowSixSiege that gains Renown written in Python.
 ___
-**_Before requesting support or using Rainbowium, make sure you read [Rainbowium WiKi Page](https://github.com/DuroDaCoder/Rainbowium/wiki)_**!
+**_Before requesting support or using Rainbowium, read [Rainbowium Wiki Page](https://github.com/DuroDaCoder/Rainbowium/wiki)_**!
 ___
-![Untitled](https://user-images.githubusercontent.com/48152410/161262540-93e01d01-9afa-4685-8775-44fda70f196f.png)
+![1](https://github.com/DuroDaCoder/Rainbowium/assets/48152410/a3998028-e601-4415-bc27-b963d072049b)
 
-![new](https://user-images.githubusercontent.com/48152410/194552030-200e5166-3fc9-4f09-90c8-c24d382c76ba.png)
+![2](https://github.com/DuroDaCoder/Rainbowium/assets/48152410/70995ba0-4bdf-41cb-a6f9-a63bd645c669)
 ___
 
 Youtube Video:
