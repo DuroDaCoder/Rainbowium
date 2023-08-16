@@ -17,7 +17,7 @@ ___
 ![2](https://github.com/DuroDaCoder/Rainbowium/assets/48152410/70995ba0-4bdf-41cb-a6f9-a63bd645c669)
 ___
 
-Youtube Video (Outdated, check Wiki):
+Youtube Video (**_Outdated, check the [Wiki]([https://discord.gg/uSttY72hB9](https://github.com/DuroDaCoder/Rainbowium/wiki))_**):
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/I3X5_K4geTc/0.jpg)](https://www.youtube.com/watch?v=I3X5_K4geTc)
 
@@ -25,6 +25,8 @@ Youtube Video (Outdated, check Wiki):
 ------------------
 ✔️Feature updates
 ✔️Buttons updates every season
+------------------
+⭐ If you like this project, please leave a star!
 ------------------
 Warning:
 
