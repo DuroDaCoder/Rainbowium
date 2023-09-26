@@ -1,7 +1,7 @@
 keyboard~=0.13.5
 psutil~=5.9.5
 PyAutoGUI~=0.9.53
-Pillow~=9.5.0
+Pillow~=10.0.1
 PyDirectInput~=1.0.4
 colorama~=0.4.6
 pynput~=1.7.6
