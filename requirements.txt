@@ -5,4 +5,4 @@ Pillow~=9.5.0
 PyDirectInput~=1.0.4
 colorama~=0.4.6
 pynput~=1.7.6
-opencv-python~=4.7.0.72
+opencv-python~=4.8.1.78.72
