@@ -21,10 +21,10 @@ Youtube Video (**_Outdated, check the [Wiki](https://github.com/DuroDaCoder/Rain
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/I3X5_K4geTc/0.jpg)](https://www.youtube.com/watch?v=I3X5_K4geTc)
 
-### TODO:
+### Future of this project:
 ------------------
-✔️Feature updates
-✔️Buttons updates every season
+❌Feature updates
+❌Buttons updates every season
 ------------------
 ⭐ If you like this project, please leave a star!
 ------------------
